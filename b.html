@@ -9,7 +9,16 @@
 		margin: 0;
 		padding: 0;
 	}
-
+@keyframes hamburgers_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
  #headers {
 	position: fixed;
 	z-index: 1000;
@@ -109,7 +118,7 @@
 	width: 100%;
 	border-radius: 50%;
 	border: 3px solid aqua;
-	animation: hamburgers _puls 1s ease infinite;
+	animation: hamburgers_puls 1s ease infinite;
 }
 #headers .hamburgers .bar {
 	height: 2px;
