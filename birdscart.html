@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRDSACESSORIES</title>
+	<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: ;
+}
+.nav-responsive{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background:white;
+    padding: 0.8rem 0rem;
+    margin-top: -5rem;
+}
+.logo{
+    width: 4rem;
+    height: 3rem ;
+    border-radius: 30%;
+}
+
+
+.nav-search{
+    width: 50vw;
+    margin: 0 auto;
+    position: relative;
+}
+#search{
+    margin: 0 auto;
+    width: 50vw;
+    outline: none;
+    font-size: 1.3rem;
+    padding:0.2rem 2rem 0.2rem 1rem;
+    border-radius: 1rem;
+    border: none;
+	}
+
+
+
+#find{
+    position: absolute;
+    font-size: 1.3rem;
+    top: 0.3rem;
+    right: 0.5rem;
+    color: rgb(184, 140, 140);
+    background: transparent;
+}
+
+.access a{
+    color: rgb(73, 73, 70);
+    font-size: 20px;
+    padding:0 10px;
+}
+#notification{
+    position: relative;
+    top: -5px;
+}
+#cart{
+    position: relative;
+    top: -5px;
+}
+#bars{
+    padding:0 10px;
+    font-size: 30px;
+    margin-right: 1rem;
+}
+#account{
+    display: none;
+    margin-right: 1rem;
+}
+#account i{
+    font-size: 30px;
+}
+
+
+
+/* main section */
+#main{
+    margin-top: 5rem;
+}
+
+.brand{
+    width: 4rem;
+    text-align: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.img-container{
+    width: 4rem;
+    height: 4rem;
+    background: rgba(0, 128, 128, 0.278);
+    border-radius: 50%;
+    position: relative;
+}
+
+.brand-img{                                      
+    height: 4.2rem;
+    width: 2.2rem;
+    position: relative;
+    top: -2.5px;
+    margin: auto;
+    text-align: center;
+}
+#brand-name{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: teal;
+}
+.categories{
+    margin-top: 25px;
+}
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 1rem 0.5rem;
+}
+
+
+#title{
+    font-size: 2rem;
+    text-align: center;
+}
+.card{
+    display: grid;
+    grid-template-columns: 
+    auto auto ;
+    grid-gap: 1px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.item-container{
+    background: white;
+    position: relative;
+    background: white;
+    padding: 15px 12px;
+    position: relative;
+}
+.item-container:hover{
+    background: lavender;
+    transition: all 0.7s ease-in-out;
+}
+.item-container:hover #card-img{
+    transform: scale(1.1);
+    transition: all 0.7s ease-in-out;
+}
+.card-item{
+    cursor: pointer;
+}
+#card-img{
+    position: relative;
+    max-width: 100%;
+    max-height: 8rem;
+    text-align: center;
+}
+#item-name{
+    text-align: left;
+    color: #ff3377;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+#add-to-cart{
+    font-size: 1.5rem;
+    color: rgb(155, 85, 96);
+    position: absolute;
+    bottom: 1rem;
+    right: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+    
+}
+.item-container:hover #add-to-cart{
+    transition: all 0.7s ease-in-out;
+    opacity: 1;
+}
+#item-price{
+    color: black;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+/* footer */
+footer{
+    background: rgb(18, 29, 29);
+    color: white;
+    font-family: sans-serif;
+    margin-top: 1rem;
+}
+#footer-title{
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 0.3rem 0;
+    color: grey;
+
+}
+.footer{
+    display: grid;
+    padding: 5rem 2rem;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
+    font-size: 0.9rem;
+}
+.footer  h3{
+    margin-bottom: 1rem;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: grey;
+}
+.footer ul li{
+    list-style-type: none;
+    line-height: 1.5rem;
+}
+.footer ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+.footer p{
+    line-height: 1.5rem;
+}
+
+#copyright{
+    margin-top: 3rem;
+    text-align: center;
+    background: rgb(39, 38, 38);
+    padding: 0.7rem 0;
+    font-size: 1.2rem;
+}
+
+.footer .social-media i{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+
+/* Details page */
+#details-page{
+    background: rgba(128, 128, 128, 0.356);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+.details{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items-detail{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1rem;
+    background: white;
+    width: 60vw;
+    height: 70vh;
+
+}
+.image-container{
+    padding: 2rem;
+    margin-top: 3rem;
+}
+#details-img{
+    width: 15rem;
+    height: 15rem;
+}
+
+
+#detail-title{
+    margin-top: 1rem;
+    color: teal;
+    font-size: 2.5rem;
+}
+#detail-price{
+    margin-top: 1.5rem;
+    color: rgb(199, 110, 110);
+    font-size: 1.5rem;
+}
+#you-save{
+    font-size: 1.2rem;
+    
+    color: rgb(106, 146, 161);
+}
+#delievery{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+#spec{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+.items-detail  ul li{
+    position: relative;
+    margin: 0.5rem 0;
+    font-family: sans-serif;
+    list-style-position: inside;
+}
+.items-detail button{
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    outline: none;
+    border: none;
+}
+#carts{
+    background: rgb(238, 166, 12);
+    color: white;
+}
+#carts:active{
+    background: white;
+    color: rgb(238, 166, 12);
+}
+#buy{
+    background: rgb(167, 179, 5);
+    color: white;
+}
+#buy:active{
+    background: white;
+    color:rgb(167, 179, 5);
+}
+
+
+/* cart list section*/
+#cart-container{
+    display: none;
+    margin-top: 5rem;
+}
+#cart-title{
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(146, 78, 78);
+}
+#empty-cart{
+    display: none;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: larger;
+}
+
+#cart-with-items{
+    display: none;
+    margin-top: 1rem;
+}
+
+.cart-column{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(5,1fr);
+}
+.cart-list{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 0.4rem;
+    position: relative;
+    padding:0.5rem 1rem;
+    background: white;
+}
+.list-name,.pay,.quantity,#remove{
+    padding: 1.2rem 0.2rem;
+}
+#list-img{
+    width: 5rem;
+    height: 5rem;
+}
+#total{
+    display: none;
+    position: relative;
+    margin-top: 3rem;
+    right: 1rem;
+    float: right;background: rgb(172, 191, 246);
+    font-family: monospace;
+    font-size: larger;
+    padding: 1rem;
+    color: rgb(149, 51, 34);
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+}
+#total #paynow { width:200px; 
+    background-color: #4CAF50; 
+    border: none; color: white; 
+    padding: 15px 32px; font-size: 16px; 
+    margin: 4px 2px; 
+    border-radius: 12px;
+        } 
+#you-saved{
+    color: rgb(101, 99, 102);
+}
+
+/* media queries for responsive view */
+@media only screen and (min-width : 800px){
+    .card{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .footer{
+        grid-template-columns: auto auto auto;
+    }
+    #account{
+        display: inline;
+    }
+    #bars{
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 800px){
+    .items-detail{
+        display: block;
+        width: 70vw;
+        height: 70vh;
+        padding: 0 4.5rem;
+    }
+    #details-img{
+        width: 8rem;
+        height: 9rem;
+    }
+	
+    #detail-title{
+        font-size: 1.7rem;
+        margin-top: 0rem;
+    }
+    #detail-price,#delievery{
+        margin-top: 0.5rem;
+    }
+    
+	
+    }
+    .image-container{
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+
+	</style>
+</head>
+
+<!-- css file -->
+
+
+ <!-- font awesome icon -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <nav>
+        <div class="nav-responsive">
+            <img src="C:\Users\HEMA\Pictures\PET.jpg" alt="image" class="logo" id="logo">
+			<ul>
+			
+			</ul>
+			
+            <div class="nav-search">
+            </div>
+            <div class="access">
+                
+                <a href="#" id="cart"><i class="fa fa-shopping-cart"></i></a>
+                <a href="#" id="bars"><i class="fa fa-bars"></i></a>
+                <a href="#" id="account"><i class="fa fa-user-circle-o"></i></a>
+            </div>
+        </div>      
+    </nav>
+
+<!-- main section -->
+<main id="main" >
+    <!-- categories section -->
+    
+	
+	
+	
+	
+<!-- end of categories section -->
+
+<!-- all categories -->
+<section class="categories">
+    <div class="title-container">
+        <h1 id="title">BIRD SEEDS</h1>
+    </div>
+    <div class="card">
+        <div class="item-container" id="0">
+            <div class="card-item">
+                <img src="https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/s/a/safflower_20.jpg" alt="img" id="card-img">
+                <p id="item-name">Safflower</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 200</h3>               
+        </div>
+
+        <div class="item-container" id="1">
+            <div class="card-item" >
+                <img src="https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/2/0/20lb_-_fruit_and_nut_lighter_3.jpg" alt="img" id="card-img">
+                <p id="item-name">Fruit n Nut mix </p>              
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 250</h3>
+        </div>
+
+        <div class="item-container" id="2">
+            <div class="card-item" >
+                <img src="https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/p/e/peanut_pieces_20.jpg"alt="img" id="card-img">
+                <p id="item-name"> Peanut pieces</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 240</h3>                
+        </div>
+
+        <div class="item-container" id="3">
+            <div class="card-item">
+                <img src="https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/c/o/cob_corn_10_1.jpg" alt="img" id="card-img">
+                <p id="item-name">Meadow Ridge Farms Cob Corn</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 190</h3>            
+        </div>
+    </div>
+</section>
+
+<!-- DRY FOOD -->
+<section class="categories">
+    <div class="title-container">
+        <h1 id="title">SMALL CAGES</h1>
+        
+    </div>
+    <div class="card">
+
+        <div class="item-container" id="4">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/39875404ce51d141aa4f6727870f9aaf_360x.jpg?v=1507507643" alt="img" id="card-img">
+                <p id="item-name">Triple stack breeder cage</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 500</h3>            
+        </div>
+
+        <div class="item-container"  id="5">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/8002422-Sandstone_360x.jpg?v=1507842138" alt="img" id="card-img">
+                <p id="item-name"> Retreat Play Top bird cage</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 400</h3>            
+        </div>
+
+        <div class="item-container"  id="6">
+
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/PVP1059_1024x1024@2x.jpg?v=1519869905" alt="img" id="card-img">
+                <p id="item-name">Prevue Hendryx Flight Bird Cage with Storage Shelf</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 450</h3>            
+        </div>
+
+        <div class="item-container" id="7">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/PVP1058-main_1024x1024@2x.jpg?v=1508296302" alt="img" id="card-img">
+                <p id="item-name">Prevue Hendryx Pointed Top Floor Bird Aviary</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 480</h3>            
+        </div>
+    </div>
+</section>
+<!-- end of dry food -->
+
+<!-- treats -->
+<section class="categories">
+    <div class="title-container">
+        <h1 id="title">LARGE CAGES</h1>
+        
+    </div>
+    <div class="card">
+
+        <div class="item-container" id="8">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/9004836-Black_360x.png?v=1524674583" alt="img" id="card-img">
+                <p id="item-name">A&E Cage Co. 48"x36" Mondo Dome Top Bird Cage</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 750</h3>            
+        </div>
+
+        <div class="item-container" id="9">
+
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/AVD1006-white_1024x1024@2x.jpg?v=1507784092" alt="img" id="card-img">
+                <p id="item-name">Avian Adventures Hacienda Dometop Bird Cage</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 600</h3>            
+        </div>
+
+        <div class="item-container" id="10">
+
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/6421-white_1024x1024@2x.jpg?v=1507907012" alt="img" id="card-img">
+                <p id="item-name">A&E Cage Co. 64"x21" Double Stack Flight Cage</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 700</h3>            
+        </div>
+
+        <div class="item-container" id="11">
+
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/PVP1176_main_1024x1024@2x.jpg?v=1508260971" alt="img" id="card-img">
+                <p id="item-name">Prevue Hendryx Extra Large Flight Bird Cage</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 760</h3>            
+        </div>
+    </div>
+</section>
+<!-- end of treats -->
+
+<!-- ACCESSORIES-->
+<section class="categories">
+    <div class="title-container">
+        <h1 id="title">BIRD BATH</h1>
+        
+    </div>
+    <div class="card">
+
+        <div class="item-container" id="12">
+            <div class="card-item">
+                <img src="https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/1/0/10415.jpg" alt="img" id="card-img">
+                <p id="item-name">Deck Rail Bird Bath </p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 280</h3>            
+        </div>
+
+        <div class="item-container" id="13">
+            <div class="card-item">
+                <img src=" https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/a/a/aa670.jpg " alt="img" id="card-img">
+                <p id="item-name">Heated Bird Bath, 20"</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 400</h3>            
+        </div>
+
+        <div class="item-container" id="14">
+            <div class="card-item">
+                <img src="https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/2/g/2gb1188_1__1_.jpg" alt="img" id="card-img">
+                <p id="item-name">16" Ceramic Bird Bath With Stand</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 300</h3>            
+        </div>
+
+        <div class="item-container" id="15">
+            <div class="card-item">
+                <img src="https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/a/l/alliedpr7ww_1.jpg" alt="img" id="card-img">
+                <p id="item-name">Aurora Water Wiggler for Bird Baths</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 275</h3>            
+        </div>
+    </div>
+</section>
+<!-- end of TOYS  -->
+
+<!-- grooming -->
+<section class="categories">
+    <div class="title-container">
+        <h1 id="title">ACCESORIES</h1>
+        
+    </div>
+    <div class="card">
+
+        <div class="item-container" id="16">
+
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/46520_2_1024x1024@2x.jpg?v=1508188026" alt="img" id="card-img">
+                <p id="item-name">Happy Beaks Medium Ball Thing Java Wood Toy</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 300</h3>            
+        </div>
+
+        <div class="item-container" id="17">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/HB209_space_ball_on_a_chain_2_360x.png?v=1508186348" alt="img" id="card-img">
+                <p id="item-name">Happy Beaks Space Ball on a Chain Bird Toy</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 140</h3>            
+        </div>
+
+        <div class="item-container" id="18">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/9a411a8db7ab8477b7fbc2a93ac0b3f0_1024x1024@2x.jpg?v=1508187664" alt="img" id="card-img">
+                <p id="item-name">Happy Beaks Extra Large Rainbow Cotton Rope Boing with Bell</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 200</h3>            
+        </div>
+
+        <div class="item-container" id="19">
+            <div class="card-item">
+                <img src="https://cdn.shopify.com/s/files/1/2422/3327/products/551_2_1024x1024@2x.jpg?v=1508187287" alt="img" id="card-img">
+                <p id="item-name">Happy Beaks Small Rainbow Cotton Rope Boing with Bell</p>
+            </div>
+            <i class="fa fa-shopping-cart" id="add-to-cart"></i>
+            <h3 id="item-price">Price : Rs 150</h3>            
+        </div>
+        
+    </div>
+</section>
+<!-- end of grooming -->
+<!-- details page section -->
+<div id="details-page">
+    <div class="details">
+        <div class="items-detail">
+            <div class="image-container">
+                <img src="" alt="" id="details-img">
+            </div>
+            <div class="details-card">
+                <h2 id="detail-title">cat <h2>
+                <h4 id="detail-price">Price </h4>
+                <p id="you-save">You save </p>
+                <p id="delievery"><strong>Delivery : </strong> In 3 - 4 days</p>
+                
+                
+                <button id="carts">Add to Cart</button>
+                <button id="buy">Back</button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+   
+<!-- end of page detail -->
+
+
+
+
+ </main>
+
+
+<!-- cart list section -->
+<div id="cart-container">
+    <p id="cart-title">Your <strong>Cart</strong></p id="cart-title">
+    <div id="empty-cart">
+        <h1>Your Cart is Empty...</h1>
+    </div>
+
+    <div id="cart-with-items">
+        <div class="cart-column">
+            <h3>Product</h3>
+            <h3>Product Name</h3>
+            <h3>Total </h3>
+            <h3>Quantity</h3>
+            <h3>Remove</h3>
+        </div>
+        <div id="item-body">
+        </div>
+        <div id="total">
+            <h3 id="total-items"></h3>
+            <h2 id="total-amount"></h2>
+            <h3 id="you-saved"></h3>
+            <button id="paynow"><a href="C:\Users\HEMA\Notepad++\html\paynow.html">PAY NOW</a></button>
+              <button id="paynow"><a href="C:\Users\HEMA\Notepad++\html\catscart.html">CANCEL</a></button>
+        </div>
+            </div>
+    </div>
+<script>
+const data= [
+    {
+        id : 0,
+        img : 'https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/s/a/safflower_20.jpg',
+        name : 'Safflower',
+        price : 200,
+        save : 25,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 1,
+        img : 'https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/2/0/20lb_-_fruit_and_nut_lighter_3.jpg',
+        name : 'Fruit n Nut mix ',
+        price : 250,
+        save : 50,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 2,
+        img : 'https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/p/e/peanut_pieces_20.jpg',
+        name : 'Peanut pieces',
+        price : 240,
+        save : 30,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 3,
+        img : 'https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/c/o/cob_corn_10_1.jpg',
+        name : 'Meadow Ridge Farms Cob Corn',
+        price : 190,
+        save : 35,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 4,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/39875404ce51d141aa4f6727870f9aaf_360x.jpg?v=1507507643',
+        name : 'Triple stack breeder cage',
+        price : 500,
+        save : 15,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 5,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/8002422-Sandstone_360x.jpg?v=1507842138 ',
+        name : 'Retreat play top bird cage',
+        price : 400,
+        save : 25,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 6,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/PVP1059_1024x1024@2x.jpg?v=1519869905',
+        name : 'Prevue Hendryx Flight Bird Cage with Storage Shelf',
+        price : 450,
+        save : 20,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 7,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/PVP1058-main_1024x1024@2x.jpg?v=1508296302',
+        name : 'Prevue Hendryx Pointed Top Floor Bird Aviary',
+        price : 480,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 8,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/9004836-Black_360x.png?v=1524674583',
+        name : 'A&E Cage Co. 48"x36" Mondo Dome Top Bird Cage',
+        price : 750,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 9,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/AVD1006-white_1024x1024@2x.jpg?v=1507784092',
+        name : 'Avian Adventures Hacienda Dometop Bird Cage',
+        price : 600,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 10,
+        img:  'https://cdn.shopify.com/s/files/1/2422/3327/products/6421-white_1024x1024@2x.jpg?v=1507907012',
+        name : 'A&E Cage Co. 64"x21" Double Stack Flight Cage',
+        price : 700,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 11,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/PVP1176_main_1024x1024@2x.jpg?v=1508260971',
+        name : 'Prevue Hendryx Extra Large Flight Bird Cage',
+        price : 760,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 12,
+        img : 'https://www.gertens.com/media/catalog/product/cache/9bcb0e6f93ab61d1646f3d38730b2605/1/0/10415.jpg',
+        name : 'Deck Rail Bird Bath',
+        price : 280,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 13,
+        img : 'https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/a/a/aa670.jpg',
+        name : 'Heated Bird Bath, 20"',
+        price : 400,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 14,
+        img : 'https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/2/g/2gb1188_1__1_.jpg',
+        name : '16" Ceramic Bird Bath With Stand',
+        price : 300,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+     {
+        id : 15,
+        img : 'https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/a/l/alliedpr7ww_1.jpg',
+        name : 'Aurora Water Wiggler for Bird Baths',
+        price : 275,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+     {
+        id : 16,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/46520_2_1024x1024@2x.jpg?v=1508188026',
+        name : 'Happy Beaks Medium Ball Thing Java Wood Toy',
+        price : 300,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+     {
+        id : 17,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/HB209_space_ball_on_a_chain_2_360x.png?v=1508186348',
+        name : 'Happy Beaks Space Ball on a Chain Bird Toy',
+        price : 140,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+     {
+        id : 18,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/9a411a8db7ab8477b7fbc2a93ac0b3f0_1024x1024@2x.jpg?v=1508187664',
+        name : 'Happy Beaks Extra Large Rainbow Cotton Rope Boing with Bell',
+        price : 200,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+     {
+        id : 19,
+        img : 'https://cdn.shopify.com/s/files/1/2422/3327/products/551_2_1024x1024@2x.jpg?v=1508187287',
+        name : 'Happy Beaks Small Rainbow Cotton Rope Boing with Bell',
+        price : 150,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+];
+
+let cartList=[]; //array to store cart lists
+
+var i;
+var detail =document.getElementsByClassName('card-item');
+var detailsImg = document.getElementById('details-img')
+var detailTitle = document.getElementById('detail-title')
+var detailPrice = document.getElementById('detail-price')
+var youSave = document.getElementById('you-save');
+var detailsPage = document.getElementById('details-page');
+var back = document.getElementById('buy')
+back.addEventListener('click',refreshPage)
+var addToCarts = document.querySelectorAll('#add-to-cart')
+var cart = document.getElementById('cart');
+
+// click event to display cart page
+cart.addEventListener('click',displayCart)
+
+var carts = document.getElementById('carts');
+
+//click events to add items to cart from details page
+carts.addEventListener('click',()=>addToCart(getId))
+
+var home = document.getElementById('logo');
+
+//click event to hide cart page and return to home page
+home.addEventListener('click',hideCart);
+
+//events on dynamically created element to remove items from list
+document.addEventListener('click',function (e){
+    if(e.target.id=='remove'){
+        var itemId = e.target.parentNode.id
+        removeFromCart(itemId)
+    }
+})
+
+
+//click event to display details page
+for(i=0;i<data.length;i++){
+    detail[i].addEventListener('click',handleDetail)
+}
+
+var getId;
+
+//click events to add items to cart from home page cart icon
+addToCarts.forEach(val=>val.addEventListener('click',()=>addToCart(val.parentNode.id)));
+
+// details function
+function handleDetail(e){
+    detailsPage.style.display = 'block'
+    getId= this.parentNode.id;
+    detailsImg.src= data[getId].img;
+    detailTitle.innerHTML=   data[getId].name;
+    detailPrice.innerHTML= 'Price : Rs ' +data[getId].price;
+    youSave.innerHTML= 'You save : (Rs ' + data[getId].save + ')';
+}
+
+// add item to the cart
+function addToCart(id) {
+    if(!data[id].itemInCart){
+        cartList= [...cartList,data[id]];
+        addItem()
+        
+        alert('item added to your cart')
+
+    }
+    else{
+        alert('your item is already there')
+    }
+    data[id].itemInCart= true
+}
+
+//back to main page
+function refreshPage(){
+    detailsPage.style.display = 'none'
+}
+
+// hide your cart page
+function hideCart(){
+    document.getElementById('main').style.display= "block";
+    document.getElementById('cart-container').style.display= "none";
+}
+
+//display your cart page
+function displayCart(){
+    document.getElementById('main').style.display= "none";
+    document.getElementById('details-page').style.display= "none";
+    document.getElementById('cart-container').style.display= "block";
+    if(cartList.length==0){
+        document.getElementById('cart-with-items').style.display= "none";
+        document.getElementById('empty-cart').style.display= "block";
+    }
+    else{
+        document.getElementById('empty-cart').style.display= "none";
+        document.getElementById('cart-with-items').style.display= "block";
+        
+    }
+}
+
+var totalAmount;
+var totalItems;
+var totalSaving;
+
+//add item to the cart
+function addItem(){
+    totalAmount=0;
+    totalItems = 0;
+    totalSaving=0
+    var clrNode=document.getElementById('item-body');
+        clrNode.innerHTML= '';
+        console.log(clrNode.childNodes)
+        cartList.map((cart)=>
+        {
+            var cartCont = document.getElementById('item-body');
+            totalAmount = totalAmount + cart.price;
+            totalSaving = totalSaving + cart.save;
+            totalItems = totalItems + 1;
+
+            var tempCart = document.createElement('div');
+            tempCart.setAttribute('class','cart-list');
+            tempCart.setAttribute('id',cart.id);
+
+            var listImg = document.createElement('img');
+            listImg.setAttribute('id','list-img');
+            listImg.src = cart.img
+            tempCart.appendChild(listImg)
+
+            var listName = document.createElement('h3');
+            listName.setAttribute('class','list-name');
+            listName.innerHTML = cart.name;
+            tempCart.appendChild(listName)
+
+            var listPay = document.createElement('h3');
+            listPay.setAttribute('class','pay');
+            listPay.innerHTML = cart.price;
+            tempCart.appendChild(listPay);
+
+            var listQuantity = document.createElement('h3');
+            listQuantity.setAttribute('class','quantity');
+            listQuantity.innerHTML = '1';
+            tempCart.appendChild(listQuantity);
+
+            var listTrash = document.createElement('i');
+            listTrash.setAttribute('class','fa fa-trash ');
+            listTrash.setAttribute('id','remove');
+            tempCart.appendChild(listTrash);
+
+            cartCont.appendChild(tempCart)
+            
+        })
+        document.getElementById('total-amount').innerHTML = 'Total Amount : Rs ' + totalAmount;
+        document.getElementById('total-items').innerHTML = 'Total Items : ' + totalItems;
+        document.getElementById('you-saved').innerHTML = 'You Saved : Rs ' + totalSaving;
+        document.getElementById('total').style.display= "block";
+}
+
+//remove item from the cart
+function removeFromCart(itemId){
+    data[itemId].itemInCart = false
+    cartList = cartList.filter((list)=>list.id!=itemId);
+    addItem()
+    if(cartList.length==0){
+        document.getElementById('cart-with-items').style.display= "none";
+        document.getElementById('empty-cart').style.display= "block";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cats</title>
+	<style  type="text/css">
+	
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff3377;
+  border-radius: 5rem;
+}	
+
+#headers {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#headers .headers {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease;
+    background-color: transparent;
+}
+#headers .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#headers .nav-lists ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#headers .nav-lists ul.active {
+	left: 0%;
+}
+#headers .nav-lists ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#headers .nav-lists ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#headers .nav-lists ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#headers .nav-lists ul li:hover a {
+	color: crimson;
+}
+#headers .hamburgers {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid aqua;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: -200px;
+	float:right;
+}
+#headers .hamburgers:after 
+{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid aqua;
+	animation: hamburgers_puls 1s ease infinite;
+}
+#headers .hamburgers .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: black;
+	z-index: -1;
+}
+#headers.hamburgers .bar::after,
+#headers .hamburgers .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: black;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#headers .hamburgers .bar::after {
+	top: 8px;
+}
+#headers .hamburgers .bar::before {
+	bottom: 8px;
+}
+#headers .hamburgers.active .bar::before {
+	bottom: 0;
+}
+#headers .hamburgers.active .bar::after {
+	top: 0;
+}
+
+
+
+
+
+
+
+ 
+	table
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	.tab2
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	.tab3
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	.tab4
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	
+
+	</style>
+</head>
+
+<body bgcolor="#ffe6f0">
+
+<section id="headers">
+    <div class="headers container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+          </a>
+        </div>
+        <div class="nav-lists">
+          <div class="hamburgers">
+            <div class="bar"></div>
+          </div>
+		  <ul>
+            <li><a href="C:\Users\HEMA\Notepad++\html\index.html" data-after="HOME">HOME</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\shop.html" data-after="SHOP">SHOP</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\gall.html" data-after="GALLERY">GALLERY</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\contactus.html" data-after="CONTACT US">CONTACT US</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\aboutuspage.html" data-after="ABOUT US">ABOUT US</a></li>
+			<li><a href="C:\Users\HEMA\Notepad++\html\doc.html" data-after="APPOINTMENT">APPOINTMENT</a></li>
+		 </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<table bgcolor = "pink">
+<figure>
+<tr>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/persian-cat-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">PERSIAN</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN :Persia(iran)<br> LIFESPAN : 14-15years <br> WEIGHT:Males: 9-13 pounds<BR>Females: 8-12 pounds</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/british-shorthair-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">BRITISH-SHORTHAIR</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United Kingdom<br> LIFESPAN : 12-17years <br>WEIGHT:Males: 12–18 pounds<br>Females: 9-15 pounds</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.catbreedslist.com/uploads/cat-pictures/exotic-shorthair-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">EXOTIC-SHORTHAIR</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN :United States<br> LIFESPAN : 12-15years <br> WEIGHT:8-14 pounds</font></p>
+</details></center>
+</td>
+<td><img src="https://www.catbreedslist.com/uploads/cat-pictures/ragdoll-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">RAGDOLL</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United States <br> LIFESPAN : 12-17years <br>WEIGHT:10-20 pounds</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+<table bgcolor = "pink"; class="tab2">
+<figure>
+<tr>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/scottish-fold-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SCOTTISH-FOLD</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United Kingdom <br> LIFESPAN : 11-14years <br>WEIGHT:Male: 9 - 13 pounds<br>Female: 6 - 9 pounds</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/siamese-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SIAMESE</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN :Thailand<br> LIFESPAN : 12-15years <br>WEIGHT:Male: 11 - 15 pounds<br>Female: 8 - 12 pounds</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.catbreedslist.com/uploads/cat-pictures/bengal-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">BENGAL</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United States <br> LIFESPAN : 12-16years <br>WEIGHT:Male: 10 - 18 pounds<br>Female: 8 - 12 pounds</font></p>
+</details></center>
+</td>
+<td><img src="https://www.catbreedslist.com/uploads/cat-pictures/siberian-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SIBERIAN</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Russia <br> LIFESPAN : 12-15years <br>WEIGHT:Male: 15 - 20 pounds<br>Female: 12 - 15 pounds</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+
+<table bgcolor = "pink"; class="tab3">
+<figure>
+<tr>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/russian-blue-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">RUSSIAN-BLUE</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Russia <br> LIFESPAN : 10-16years <br>WEIGHT:Male: 10 - 15 pounds<br>Female: 7 - 12 pounds</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/japanese-bobtail-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">JAPANESE-BOBTAIL</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Japan <br> LIFESPAN : 14-16years <br>WEIGHT:Male: 7 - 10 pounds<br>Female: 6 - 8 pounds</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.catbreedslist.com/uploads/cat-pictures/turkish-angora-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">TURKISH-ANGORA</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Turkey<br> LIFESPAN : 15-18years <br>WEIGHT:Male: 8 - 12 pounds<br>Female: 6 - 9 pounds</font></p>
+</details></center>
+</td>
+<td><img src="https://www.catbreedslist.com/uploads/cat-pictures/bombay-cat-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">BOMBAY</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United States <br> LIFESPAN : 12-16years <br>WEIGHT:8 - 12 pounds</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+
+<table bgcolor = "pink" ; class="tab4">
+<figure>
+<tr>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/sphynx-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SPHYNX</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Canada <br> LIFESPAN : 12-14years <br>WEIGHT:Male: 8 - 12 pounds<br>Female: 6 - 9 pounds</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.catbreedslist.com/uploads/cat-pictures/egyptian-mau-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">EGYPTIAN MAU</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN :Egypt<br> LIFESPAN : 18-20years <br>WEIGHT:Male: 10 - 14 pounds<br>Female: 6 - 10 pounds</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.catbreedslist.com/uploads/cat-pictures/american-bobtail-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">AMERICAN-BOBTAIL</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United States <br> LIFESPAN : 11-15years <br>WEIGHT:Male: 12 - 16 pounds<br>Female: 7 - 11 pounds</font></p>
+</details></center>
+</td>
+<td><img src="https://www.catbreedslist.com/uploads/cat-pictures/california-spangled-cat-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">CALIFORNIA-SPANGLED</font></figcaption></center><br>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United States <br> LIFESPAN : 10-14years <br>WEIGHT:Male: 12 - 15 pounds<br>Female: 10 - 13 pounds</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+
+<script>
+const hamburgers = document.querySelector('.headers .nav-bar .nav-lists .hamburgers');
+const mobile_menu = document.querySelector('.headers .nav-bar .nav-lists ul');
+const menu_item = document.querySelectorAll('.headers .nav-bar .nav-lists ul li a');
+const headers = document.querySelector('.headers.container');
+
+hamburgers.addEventListener('click', () => {
+	hamburgers.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		headers.style.backgroundColor = '#29323c';
+	} else {
+		headers.style.backgroundColor = 'transparent';
+	}
+});
+        
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburgers.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
+</script>
+
+</body>
+</html>

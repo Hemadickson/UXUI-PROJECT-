@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" and dir="Itr">
+<head>
+    <meta charset="utf-8">
+    <title>payment </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+
+body{
+  background: #2196F3;
+  background-size: cover;
+}
+
+.wrapper{
+  background-image :linear-gradient(#05F9D4,rgb(37, 12, 12));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px #00bfff; 
+  height: 70%;
+}
+
+.wrapper h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+}
+.payment-logo{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  text-align: center;
+  line-height: 85px;
+}
+
+.payment-logo:before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: #2196F3;
+  border-radius: 50%;
+}
+.payment-logo p{
+  position: relative;
+  color: #f8f8f8;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 58px;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 3px solid  #ced4ce;
+  width: 100%;
+  padding: 10px;
+  
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 80px;
+  
+}
+.i{
+  position: relative;
+}
+
+.i .fas{
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.wrapper .btn input[type="Submit"]{
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: #2196F3;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #f10487;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+.btn a{ 
+  padding: 2px 10px;
+  background: #2196F3; 
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7); 
+  background-color:  #2196F3;;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  } 
+.btn a:hover {
+   background: #2196F3; 
+  } 
+</style>
+<body>
+    <div class="wrapper">
+       
+        <div class="payment">
+            <div class="payment-logo">
+              <p>p</p>
+            </div>
+            <br>
+            <br>
+            <h2><i class="fa fa-paypal" style="color:navy;"></i> PERSONAL DEATILS</h2>
+            <div id="error_message">
+           
+            </div>
+        <form action="" id="myform" onsubmit = "return validate();">
+            <div class="input_field"></div>
+            <label for="fname"><i class="fa fa-user"></i> Full Name
+          <div class="input_field"  >
+              <input type="text" placeholder="Name" id="cname">
+          </div>
+          </label>
+          <label for="fnu"><i class="fa fa-envelope"></i> Email</label>
+          <div class="input_field">
+              <input type="text" placeholder="-----@gmail.com" id="cnum">
+          </div>
+          <label for="fname"><i class="fa fa-address-card-o"></i> Address
+          <div class="input_field">
+              <input type="text" placeholder="---------" id="expmonth">
+          </div>
+          <label for="fname"><i class="fa fa-institution"></i> City
+          <div class="input_field">
+              <input type="text" placeholder="-------" id="expyear">
+          </div>
+          <label for="fname"><i class="fa fa-phone"></i> Phone number
+          <div class="input_field">
+              <input type="text" placeholder="0000000000" id="cvv">
+              <br>
+              <br>
+              <div class="btn">
+                <a href=" C:\Users\HEMA\Notepad++\html\nextpay.html" class="btn btn-sm manage">NEXT</a>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

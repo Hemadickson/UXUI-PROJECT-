@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>GALLERY</title>
+</head>
+<style>
+    #headers {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#headers .headers {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease;
+    background-color: transparent;
+}
+#headers .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#headers .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#headers .nav-list ul.active {
+	left: 0%;
+}
+#headers .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#headers .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#headers .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#headers .nav-list ul li:hover a {
+	color: crimson;
+}
+#headers .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid aqua;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: -200px;
+	float:right;
+}
+#headers .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid black;
+	animation: hamburger_puls 1s ease infinite;
+}
+#headers .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#headers.hamburger .bar::after,
+#headers .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#headers .hamburger .bar::after {
+	top: 8px;
+}
+#headers .hamburger .bar::before {
+	bottom: 8px;
+}
+#headers .hamburger.active .bar::before {
+	bottom: 0;
+}
+#headers .hamburger.active .bar::after {
+	top: 0;
+}
+ 
+
+
+
+ 
+    *{
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   text-transform: capitalize;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+        }
+		
+		
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff3377;
+  border-radius: 5rem;
+}
+    
+.container
+        {
+            position: relative;
+            min-height: 100vh;
+            background: #ffe6f0;
+        }
+.container h1{
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 40px;
+            font-weight: normal;
+        }
+.container .video-container{
+            display:flex;
+            flex-wrap: wrap;
+            gap:15px; 
+            justify-content: center;
+            padding: 10px;
+            
+        }
+.container .video-container .video
+        {
+            height: 250px;
+            width: 350px;
+            border: 5px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0.7)
+            cursor:pointer;
+            overflow: hidden;
+        }
+.container .video-container .video video
+        {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .2s linear;
+            
+        }
+.container .video-container .video:hover video
+        
+        {
+            transform: scale(1.1);
+        }
+.container .popup-video
+    {
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 100;
+        background: rbga(0,0,0,0.8);
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+.container .popup-video video
+    {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        width: 750px;
+        border-radius: 5px;
+        border: 3px solid #fff;
+        object-fit: cover;
+        
+    }
+    
+.container .popup-video span{
+        position: absolute;
+        top :5px; right: 20px;
+        font-size: 50px;
+        color: #fff;
+        font-weight: bolder;
+        z-index: 100;
+        cursor: pointer;
+    }
+    @media (max-width:768px){
+        .container .popup-video video
+        {
+            width: 95%;
+            
+        }
+    }</style>
+<body >
+  <!-- Header -->
+  <section id="headers">
+    <div class="headers container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>V</span>IDEO <span>G</span>ALLERY</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="C:\Users\HEMA\Notepad++\html\index.html" data-after="HOME">HOME</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\shop.html" data-after="SHOP">SHOP</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\gall.html" data-after="GALLERY">GALLERY</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\contactus.html" data-after="CONTACT US">CONTACT US</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\aboutuspage.html" data-after="ABOUT US">ABOUT US</a></li>
+			<li><a href="C:\Users\HEMA\Notepad++\html\doc.html" data-after="APPOINTMENT">APPOINTMENT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section>
+<div class="container">
+<div class="video-container">
+<div class="video"><video src="https://player.vimeo.com/external/468854267.sd.mp4?s=255f3776e95dfba469aeb15d81f2971215d6d8de&profile_id=139&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/498886911.sd.mp4?s=7806806a883334b99991205df1333b8659e4beee&profile_id=139&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/542379007.sd.mp4?s=c347872be47999155a83e77006dfe0519accb307&profile_id=164&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/567254196.sd.mp4?s=dcf2ee9b91465c789908249460874e25917bab0d&profile_id=164&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/605993017.sd.mp4?s=38aff47e755451276321142492518bae204acad4&profile_id=164&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/433276676.sd.mp4?s=85acf16691290894edce60cb69ae6c3eebd8f93f&profile_id=139&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/528212916.sd.mp4?s=2b903e1f4cdeeba05a8081aa7a357167e46853bf&profile_id=139&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://player.vimeo.com/external/576632402.sd.mp4?s=5afe49fd0549a053c61da0d3acb4f641d76f7a9b&profile_id=164&oauth2_token_id=57447761" muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-smiling-dog-1552-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-white-cat-lying-among-the-grasses-seen-up-close-22732-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-big-white-birds-caressing-each-other-11007-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-parrot-eating-close-up-7094-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-two-puppies-side-by-side-1210-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-little-cats-lying-on-an-armchair-32471-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-flock-of-pigeons-on-the-street-slow-motion-27133-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-parrot-in-nature-14363-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-a-couple-of-cats-in-the-snow-9949-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-little-dog-running-in-the-snow-25150-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-team-of-husky-sled-dogs-running-in-the-snow-7355-large.mp4"muted></video></div>
+<div class="video"><video src="https://assets.mixkit.co/videos/preview/mixkit-husky-sled-dogs-in-harness-7267-large.mp4"muted></video></div>
+</div>
+    <div class="popup-video"> 
+        <span>&times;</span>
+ <video src="po.mp4" muted autoplay controls></video>
+    </div> 
+     </div>
+    </section>
+    <script>
+const hamburger = document.querySelector('.headers .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.headers .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.headers .nav-bar .nav-list ul li a');
+const headers = document.querySelector('.headers.container');
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+        
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+}); 
+
+document.querySelectorAll('.video-container video').forEach(vid => {
+     vid.onclick = () =>{
+         document.querySelector('.popup-video').style.display="block";
+         document.querySelector ('.popup-video video').src = vid.getAttribute('src');
+     }    
+});
+document.querySelector('.popup-video span').onclick = () =>{
+     document.querySelector('.popup-video').style.display="none";
+}
+
+    </script>
+      </body>
+</html>

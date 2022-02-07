@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>shop</title>
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background:#333;
+    color:#ff3377;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+section{
+    padding:1rem 5%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.7rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    color:#333;
+    background:pink;
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 10% 25%, 0 100%);
+    z-index: -1;
+    background:#444;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+.btn:hover:before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btn:hover{
+    color:#ff3377;
+}
+
+.heading{
+    text-align: center;
+    padding:1rem;
+    color:#333;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+    font-size: 3rem;
+    padding-top: 8rem;
+}
+
+.heading i{
+    padding:0 .5rem;
+    color: #ff3377;
+}
+
+.category .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.category .box-container .box{
+    width:25rem;
+    margin:2rem;
+    text-align: center;
+}
+
+.category .box-container .box img{
+    width: 100%;
+}
+
+.category .box-container .box h3{
+    color:#ff3377;
+    font-size: 2rem;
+    padding:1rem 0;
+    font-family: inherit;
+}
+
+
+}
+
+@media (max-width:400px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 2.2rem;
+    }
+
+    .category .box-container .box{
+        width:100%;
+    }
+
+}
+    </style>
+	<body>
+<section class="category" id="category">
+
+    <h1 class="heading"> <i class="fas fa-paw"></i> SHOP BY CATEGORY <i class="fas fa-paw"></i> </h1>
+
+    <div class="box-container">
+        
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZFEcRM63bnX5W2k-5iAsmSSiVQh7ypfHRMvHK97V0eUEWESCcL0uheqx0P7_NBbaVTw&usqp=CAU" alt="">
+            <h3>Food For Dogs</h3>
+            <a href="C:\Users\HEMA\Notepad++\html\doggroom.html" class="btn">shop now</a>
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2Pma_XYcMflrHnFNXNmPqxKmEi4byCjQaG6-XkasHihixGPlJ4z4b3x4n8W1XHv31jM&usqp=CAU" alt="">
+            <h3>Food For Cats</h3>
+            <a href="C:\Users\HEMA\Notepad++\html\catgroom.html" class="btn">shop now</a>
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkR6Otwb4wD8UEfELsD0RA-EAEMcexKIHLF4CEdXU4LaeB3BtCdEyHekEEnFYURnMObUw&usqp=CAU" alt="">
+            <h3>Food For Birds</h3>
+            <a href="C:\Users\HEMA\Notepad++\html\birdgroom.html" class="btn">shop now</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

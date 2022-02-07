@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <style type = "text/css">
+	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff3377;
+  border-radius: 5rem;
+}
+section
+    {
+        position:relative;
+        width:100%;
+        min-height: 100vh;
+        padding: 100px;
+        display: :flex;
+        justify-content: space-between;
+    }
+    
+header
+    {
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .content {
+        position:relative;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content .textbox
+    {
+        position: relative;
+        max-width: 600px;
+        
+    }
+     .content .textbox h2
+    {
+        color: #ff3377;
+        font-size: 4em;
+        line-height: 1.4em;
+        font-weight: 500;
+    }
+	 .content .textbox h2:hover
+    {
+        color: #ffe6f0;
+        font-size: 4em;
+        line-height: 1.4em;
+        font-weight: 500;
+    }
+	.content .textbox h2 span
+    {
+        color: black;
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+	
+     .content .textbox h2 span:hover
+    {
+        color: #ff3377;
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+	
+	 .content .textbox p
+    {
+        color: #ff3377;
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+	
+    .content .imgbox;
+    {
+        width: 600px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+        margin-top: 50px;
+        
+    }
+    .content .imgbox img
+    {
+        max-width: 340px;
+        
+    }
+    .starbucks
+    {
+        width: 500px;
+        top :10px;
+        
+    }
+    .thumb
+    {
+        position:absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translate(-50%);
+        display: flex;
+    }
+    .thumb li
+    {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .thumb li:hover
+    {
+        transform: translateY(-15px);
+    }
+    .thumb li img
+    {
+        max-width: 60px; 
+    }
+    .circle
+    {
+        position :absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        clip-path: circle(600px at right 800px)
+    }
+    
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #130f40;
+}
+
+.heading span {
+  color: #ff3377;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #130f40;
+  cursor: pointer;
+  background: none;
+  color: #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #130f40;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+.header {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 9%;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-transform: translateY(-10rem);
+          transform: translateY(-10rem);
+}
+
+.header.active {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #130f40;
+  font-weight: bolder;
+}
+
+.header .logo i {
+  color: #ff3377;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #666;
+}
+
+.header .navbar a:hover {
+  color: #ff3377;
+}
+
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: #130f40;
+  cursor: pointer;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+  color: #e67e22;
+}
+
+.header .login-form {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  width: 35rem;
+  border-radius: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: none;
+}
+
+.header .login-form.active {
+  display: block;
+  -webkit-animation: fadeIn .4s linear;
+          animation: fadeIn .4s linear;
+}
+
+.header .login-form h3 {
+  color: #130f40;
+  font-size: 2.5rem;
+  padding-bottom: .5rem;
+}
+
+.header .login-form .box {
+  width: 100%;
+  border-bottom: 0.2rem solid #130f40;
+  border-width: .1rem;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  color: #130f40;
+  text-transform: none;
+  margin: 1rem 0;
+}
+
+.header .login-form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+.header .login-form .remember label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.header .login-form .btn {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.header .login-form .btn:hover {
+  background: #130f40;
+}
+
+.header .login-form .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.header .login-form .links a {
+  font-size: 1.4rem;
+  color: #e67e22;
+}
+
+.header .login-form .links a:hover {
+  color: #130f40;
+  text-decoration: underline;
+}
+
+#menu-btn {
+  display: none;
+}
+
+
+.banner-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.banner-container .banner {
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container .banner img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-container .banner:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.banner-container .banner .content {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner-container .banner .content span {
+  font-size: 1.7rem;
+  color: #779;
+}
+
+.banner-container .banner .content h3 {
+  padding-top: .5rem;
+  font-size: 2.2rem;
+  color: #244d4d;
+}
+
+.banner-container .banner .content .btn {
+  padding: .7rem 2.5rem;
+}
+
+.category .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  background-color: #ff66a3;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem #000;
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.card::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #cc0052;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #cc0052;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card-img {
+  width: 80%;
+    border-radius: 50%;
+}
+
+.card-name {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  margin: 2rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+
+.card-btn {
+  width: 70%;
+  background-color: #111;
+  color: #888;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  border: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  box-shadow: -0.2rem -0.2rem 0.2rem #000;
+}
+/* End of Section 2 */
+
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.about .image img {
+  width: 100%;
+}
+
+.about .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.about .content h3 {
+  color: #130f40;
+  font-size: 4rem;
+}
+
+.about .content h3 span {
+  color: #e67e22;
+}
+
+.about .content p {
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.dog-food,
+.cat-food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.dog-food .image,
+.cat-food .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.dog-food .image img,
+.cat-food .image img {
+  width: 100%;
+}
+
+.dog-food .content,
+.cat-food .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.dog-food .content h3,
+.cat-food .content h3 {
+  font-size: 3.5rem;
+  color: #130f40;
+}
+
+.dog-food .content h3 span,
+.cat-food .content h3 span {
+  color: #e67e22;
+}
+
+.dog-food .content p,
+.cat-food .content p {
+  padding: 1rem 0;
+  line-height: 2;
+  color: #666;
+  font-size: 1.6rem;
+}
+
+.dog-food .content .amount,
+.cat-food .content .amount {
+  font-size: 3.5rem;
+  color: #130f40;
+  padding: .5rem 0;
+}
+
+.dog-food .content a img,
+.cat-food .content a img {
+  height: 15rem;
+  margin-top: 1rem;
+}
+
+.dog-food .content a:hover img,
+.cat-food .content a:hover img {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.cat-food {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.shop .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.shop .box-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop .box-container .box:hover .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.shop .box-container .box:hover .icons {
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
+}
+
+.shop .box-container .box .image {
+  height: 45rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shop .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.shop .box-container .box .icons {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  -webkit-transform: translateX(10rem);
+          transform: translateX(10rem);
+}
+
+.shop .box-container .box .icons a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  background: #fff;
+  color: #130f40;
+  text-align: center;
+}
+
+.shop .box-container .box .icons a:hover {
+  color: #fff;
+  background: #e67e22;
+}
+
+.shop .box-container .box .content {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.shop .box-container .box .content h3 {
+  font-size: 2.2rem;
+  color: #130f40;
+  padding-bottom: .5rem;
+}
+
+.shop .box-container .box .content .amount {
+  font-size: 2rem;
+  color: #e67e22;
+}
+
+.services .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services .box-container .box {
+  background: #ffe6f0;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+}
+
+.services .box-container .box:nth-child(even) {
+  border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;
+}
+
+.services .box-container .box:hover {
+   background:#ff80b3;
+  border-radius: .5rem;
+}
+.services span{
+color:#ff3377;
+}
+
+.services .box-container .box i {
+  height: 6.5rem;
+  width: 6.5rem;
+  line-height: 6.5rem;
+  font-size: 3rem;
+  color: #fff;
+  background: #ff3377;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+}
+
+.services .box-container .box h3 {
+  font-size: 2.2rem;
+  color: #ff3377;
+  padding: 1rem 0;
+}
+.services .box-container .box h3:hover {
+  font-size: 2.2rem;
+  color: #000000;
+  padding: 1rem 0;
+}
+
+.plan .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.plan .box-container .box {
+  position: relative;
+  padding: 2rem;
+  border-radius: .5rem;
+  position: relative;
+  margin-bottom: 2rem;
+  background: #ffe6f0;
+}
+.plan .heading span{
+color:#ff3377;
+}
+
+.plan .box-container .box .btn {
+  position: absolute;
+  bottom: -2rem;
+  right: 2rem;
+  background:#ff66a3;
+  border-color:#ff80b3;
+}
+
+.plan .box-container .box .title {
+  text-align: center;
+  color: #ff3377;
+  font-size: 2rem;
+}
+
+.plan .box-container .box .day {
+  text-align: center;
+  color: #000000;
+  font-size: 3.5rem;
+}
+
+.plan .box-container .box .icon {
+  
+  font-size: 5rem;
+  padding: 2rem 0;
+}
+
+.plan .box-container .box .list {
+  margin: 1rem 0;
+}
+
+.plan .box-container .box .list p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.6rem;
+  color: #ff3377;
+  padding: 1rem 0;
+}
+
+.plan .box-container .box .list p span {
+  color: #000000;
+}
+
+.plan .box-container .box .amount {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: #130f40;
+}
+
+.plan .box-container .box .amount span {
+  font-size: 3rem;
+}
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.review .box-container .box{
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:3rem 2rem;
+    position: relative;
+    border:.1rem solid rgba(0,0,0,.1);
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom:3rem; right:3rem;
+    font-size: 6rem;
+    color:#ffe6f0;
+}
+
+.review .box-container .box .stars i{
+    color:gold;
+    font-size: 2rem;
+}
+
+.review .box-container .box p{
+    color:#999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color:#333;
+}
+
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color:#999;
+}
+
+
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+    background-color: gray;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+	</style>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-paw"></i> PETCARE </a>
+
+    <nav class="navbar">
+        <a href="C:\Users\HEMA\Notepad++\html\index.html">HOME</a>
+        <a href="C:\Users\HEMA\Notepad++\html\shop.html">SHOP</a>
+        <a href="C:\Users\HEMA\Notepad++\html\gall.html">GALLERY</a>
+          <a href="C:\Users\HEMA\Notepad++\html\b.html">BLOG</a>
+        <a href="C:\Users\HEMA\Notepad++\html\contactus.html">CONTACT US</a>
+        <a href="C:\Users\HEMA\Notepad++\html\aboutuspage.html">ABOUT US</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <a href="C:\Users\HEMA\Notepad++\html\shop.html" class="fas fa-shopping-cart"></a>
+        <div class="fa fa-gift" id="login-btn"></div>
+    </div>
+
+    <form action="" class="login-form">
+       
+        
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+    <section>
+            <div class="circle"></div> 
+            <div class="content">
+                <div class="textbox">
+                    <h2>We Know you love your Pet more<br><span>Great Price, Great Pets
+</span></h2>
+                    <p>Welcome to the new WebMD Pet Health Center. WebMD veterinary experts provide comprehensive information about pet health care, offer nutrition and feeding</p>
+                    
+                </div>
+                <div class="imgbox">
+                    <img src="https://freepngimg.com/thumb/dog/15-dog-png-image-picture-download-dogs.png" class="starbucks">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li> <img src="https://freepngimg.com/thumb/dog/52-dog-png-image-picture-download-dogs-thumb.png" onclick="imgslider('https://freepngimg.com/thumb/dog/15-dog-png-image-picture-download-dogs.png');changeCircleColor('linear-gradient(60deg, #ff3377 0%, #485563 100%')"></li>
+                <li> <img src="https://freepngimg.com/thumb/dog/52-dog-png-image-picture-download-dogs-thumb.png" onclick="imgslider('https://freepngimg.com/thumb/dog/15-dog-png-image-picture-download-dogs.png');changeCircleColor('linear-gradient(60deg, #ff3377 0%, #fff 100%')"></li>
+                <li> <img src="https://freepngimg.com/thumb/dog/52-dog-png-image-picture-download-dogs-thumb.png" onclick="imgslider('https://freepngimg.com/thumb/dog/15-dog-png-image-picture-download-dogs.png');changeCircleColor('linear-gradient(60deg, #ff3377 0%, #ffe680 100%')"></li>
+            </ul>
+        </section>
+
+
+
+ <section class="section-2">
+            <h1 class="section-heading">NEW <span style = "color: #ff3377">ARRIVALS</span></h1>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.jVwpYZXXesFz1VsZb6CLbgHaHa&pid=Api&P=0&w=156&h=156" class="card-img">
+                    <h3 class="card-name">BIRD</h3>
+                    <a href ="C:\Users\HEMA\Notepad++\html\birdscart.html" button class="card-btn">Order now</button></a>
+                </div>
+                <div class="card">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.fqknOz3HdgG0JX1iQSjqQwAAAA&pid=Api&P=0&w=190&h=159" class="card-img">
+                    <h3 class="card-name">CAT</h3>
+                     <a href ="C:\Users\HEMA\Notepad++\html\catscart.html" button class="card-btn">Order now</button></a>
+                </div>
+                <div class="card">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.eoYsuoWmyO6W7zdKg40LKAAAAA&pid=Api&P=0&w=162&h=162" class="card-img">
+                    <h3 class="card-name">DOG</h3>
+                    <a href ="C:\Users\HEMA\Notepad++\html\dogcart.html" button class="card-btn">Order now</button></a>
+                </div>
+            </div>
+        </section>
+
+<!-- shop section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-dog"></i>
+            <h3>dog boarding</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-cat"></i>
+            <h3>cat boarding</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-bath"></i>
+            <h3>spa & grooming</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-drumstick-bite"></i>
+            <h3>healthy meal</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-baseball-ball"></i>
+            <h3>activity exercise</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>health care</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- plan section starts  -->
+
+<section class="plan" id="plan">
+
+    <h1 class="heading"> choose a <span>plan</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="title">PET CARE</h3>
+            <h3 class="day"> BASIC </h3>
+            <i class="fas fa-dog icon" style="color: #ff3377"></i>
+            <div class="list">
+                <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style ="color:green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-times" style ="color:red;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style ="color:red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style ="color:red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>50</div>
+            <a href="C:\Users\HEMA\Notepad++\html\dogsubscription.html" class="btn"> choose plan </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> BASIC </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377"></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style ="color:green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-times" style ="color:red;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style ="color:red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style ="color:red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>50</div>
+            <a href="C:\Users\HEMA\Notepad++\html\catsubscription.html" class="btn"> choose plan </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">BIRD CARE</h3>
+            <h3 class="day"> BASIC </h3>
+            <i class="fas fa-dove icon" style="color: #ff3377"></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style ="color:green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-times" style ="color:red;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style ="color:red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style ="color:red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>50</div>
+            <a href="C:\Users\HEMA\Notepad++\html\birdsubscription.html" class="btn"> choose plan </a>
+        </div>
+
+    </div>
+    </section>
+    <section class="review" id="review">
+
+<h1 class="heading"> customer's <span>review</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt" style="color: gold;"></i>
+        </div>
+        <p>I just want to let you know that the "I and love and you" dog food, along with the added digest stuff is working amazingly for Rascal!!!! Look under his mouth, this used to be so red and scaling.It’s miraculous, his fur has NEVER been better - all over softer and no allergies!"</p>
+        <div class="user">
+            <img src="https://image.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg" alt="">
+            <div class="user-info">
+                <h3>JIMIN TAE</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box" >
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"style="color: black;"></i>
+            <i class="fas fa-star"style="color: black;"></i>
+        </div>
+        <p>"Your food has saved my favorite cat's life. He was close to dying and not absorbing nutrients until I tried your food. Thank you so very much for giving me more time with my most special boy. I cannot tell you how happy I am."</p>
+        <div class="user">
+            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+            <div class="user-info">
+                <h3>LEE MIN-HO</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star" style="color: black;"></i>
+        </div>
+        <p>"Your food has saved my favorite tweeties life. He was close to dying and not absorbing nutrients until I tried your food. Thank you so very much for giving me more time with my most special boy. I cannot tell you how happy I am."</p>
+        <div class="user">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBfYOFZeVd-vB6uCNlmjna1zcgd0_JYrij9NP1To1ZWpyBxhmpVjAnJ2mdYiJ7J13Gso&usqp=CAU" alt="">
+            <div class="user-info">
+                <h3> JHOPE</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+</div>
+</section>
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src = "C:\Users\HEMA\Pictures\PET.jpg">
+				<h3>About<span>PET CARE</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker-alt"></i>
+					  <p><span> 71/7 VASAR VARADHAPA STREET NEW WASHERMENPET CHENNAI-81
+						 </span>
+						</p>
+				</div>
+
+				<div>
+					<i class="fas fa-fax"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@petcare.com">support@petcare.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About our Website</span>
+					We Know you love your Pet more Great Price, Great Pets
+					</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-linkedin"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+<script src ="C:\Users\HEMA\Notepad++\html\pet.js"></script>
+</body>
+</html>

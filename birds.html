@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRDS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<style>
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+/* Common style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  
+}
+
+#headers {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#headers .headers {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease;
+    background-color: transparent;
+}
+#headers .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#headers .nav-lists ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#headers .nav-lists ul.active {
+	left: 0%;
+}
+#headers .nav-lists ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#headers .nav-lists ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#headers .nav-lists ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#headers .nav-lists ul li:hover a {
+	color: crimson;
+}
+#headers .hamburgers {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid aqua;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: -200px;
+	float:right;
+}
+
+
+#headers .hamburgers:after 
+{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid aqua;
+	animation: hamburgers_puls 1s ease infinite;
+}
+#headers .hamburgers .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: black;
+	z-index: -1;
+}
+#headers.hamburgers .bar::after,
+#headers .hamburgers .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: black;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#headers .hamburgers .bar::after {
+	top: 8px;
+}
+#headers .hamburgers .bar::before {
+	bottom: 8px;
+}
+#headers .hamburgers.active .bar::before {
+	bottom: 0;
+}
+#headers .hamburgers.active .bar::after {
+	top: 0;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
+/* Section 3 */
+.section-3 {
+  background-color: #ffe6f0;
+  padding: 5rem 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.gallery-link {
+  position: relative;
+  margin: 4rem 1rem;
+}
+
+.gallery-link::before {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  height: 0;
+  background-color: #fff;
+  z-index: 10;
+  transition: height 0.5s;
+}
+
+.gallery-link:hover::before {
+  height: 80%;
+}
+
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.gallery-link:hover::after {
+  width: 90%;
+}
+
+.food-img {
+  width: 24vw;
+  height: 15vw;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+  transition: all 0.5s;
+}
+
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+    3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+  filter: blur(0.5rem);
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.food-name {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
+}
+
+.food-description {
+  position: absolute;
+  bottom: 3vw;
+  left: 2rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
+}
+/* End of Section 3 */
+
+
+/* Responsive */
+@media (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-2 {
+    height: auto;
+    padding: 10rem 0 12rem 0;
+  }
+
+  .cards-container {
+    margin-top: 10rem;
+  }
+
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+  .section-4 {
+    height: 40rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .section-4-text {
+    margin-bottom: 8rem;
+  }
+}
+
+.container
+        {
+            position: relative;
+            min-height: 100vh;
+            background: #fff;
+        }
+.container h1{
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            font-size: 40px;
+            font-weight: normal;
+        }
+.container span{
+color:red;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff3377;
+  border-radius: 5rem;
+}
+</style>
+
+<body >
+
+<section id="headers">
+    <div class="headers container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+		  <h1><span>B</span>IRD<span> B</span>REED</h1>
+          </a>
+        </div>
+        <div class="nav-lists">
+          <div class="hamburgers">
+            <div class="bar"></div>
+          </div>
+           <ul>
+            <li><a href="C:\Users\HEMA\Notepad++\html\index.html" data-after="HOME">HOME</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\shop.html" data-after="SHOP">SHOP</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\gall.html" data-after="GALLERY">GALLERY</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\contactus.html" data-after="CONTACT US">CONTACT US</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\aboutuspage.html" data-after="ABOUT US">ABOUT US</a></li>
+			<li><a href="C:\Users\HEMA\Notepad++\html\doc.html" data-after="APPOINTMENT">APPOINTMENT</a></li>
+		 </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+        <section class="section-3">
+            
+            <div class="gallery">
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/133940571/900" class="food-img">
+                    <h3 class="food-name">PARROT</h3>
+                    <p class="food-description">Scientific name:Psittaciformes<br>
+Order: Psittaciformes; Wagler, 1830<br>
+Lifespan: Cockatoos: 40 – 60 years,Hyacinth:50years</p>
+                </a>
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://images.squarespace-cdn.com/content/v1/56774d10e0327c06bcd4b6c4/1609881063597-BAOG2ZI1YA1RGKH9B5XC/12.18+%283%29.jpg" class="food-img">
+                    <h3 class="food-name">LOVEBIRD</h3>
+                    <p class="food-description">Lifespan: Rosy-faced: 15 – 25<br>
+Clutch size: 4 – 6<br>
+Genus: Agapornis,Selby, 1836<br>
+Class: Aves<br>
+Order: Psittaciformes</p>
+                </a>
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSat20Z1wzAE0tRhyB56sdyw4ENFygmUw1O72WfDR2Aosn2Es1SY51Lukq-DHDM_D5UPSc&usqp=CAU" class="food-img">
+                    <h3 class="food-name">PIGEON</h3>
+                    <p class="food-description">Species: C. livia
+Class: Aves
+Kingdom: Animalia
+Phylum: Chordata
+Lifespan:avg(5-6) yrs</p>
+                </a>
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://thumbs.dreamstime.com/b/peacock-fanned-tail-12834202.jpg" class="food-img">
+                    <h3 class="food-name">PEACOCK</h3>
+                    <p class="food-description">Kingdom:Animalia
+Phylum:Chordata
+Class:Aves
+Order:Galliformes
+Family:Phasianidae
+Subfamily:Pavoninae
+Tribe:Pavonini</p>
+                </a>
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/10245848/large.jpeg" class="food-img">
+                    <h3 class="food-name">DOVE</h3>
+                    <p class="food-description">scientific name: Columbidae
+Family: Columbidae; Leach, 1820<br>
+Order: Latham, 1790<br>
+Phylum: Chordata<br>
+Lifespan: 1.5 years</p>
+                </a>
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://sandiegobirdspot.com/wp-content/gallery/grasshopper-sparrow/4F7A7879_3.jpg" class="food-img">
+                    <h3 class="food-name">SPARROW</h3>
+                    <p class="food-description">Scientific name: Passeridae<br>
+Family: Passeridae; Rafinesque, 1815<br>
+Order: Passeriformes<br>
+Lifespan: House sparrow: 3 years</p>
+                </a>
+                <a href="#" class="gallery-link" title="Order">
+                    <img src="https://media.baamboozle.com/uploads/images/170179/1607963117_21069" class="food-img">
+                    <h3 class="food-name">DUCK</h3>
+                    <p class="food-description">Lifespan: Mallard: 5 – 10 years
+Family: Anatidae
+Order: Anseriformes
+Phylum: Chordata
+Class: Aves
+Kingdom: Animalia</p>
+                </a>
+                 <a href="#" class="gallery-link" title="Order">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkdRGZWNKhB9T7Mnme0vaLV38Dv25BHlZOSw&usqp=CAU" class="food-img">
+                    <h3 class="food-name">GOLDFINCH</h3>
+                    <p class="food-description">Kingdom:Animalia
+Phylum:Chordata
+Class:Aves
+Order:Galliformes
+Family:Phasianidae
+Subfamily:Pavoninae
+Tribe:Pavonini</p>
+                </a>
+                 <a href="#" class="gallery-link" title="Order">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe5EHz0bND54HhoDURYql7IjBzxACF_Anf0A&usqp=CAU" class="food-img">
+                    <h3 class="food-name">RAVEN</h3>
+                    <p class="food-description">Kingdom:Animalia
+Phylum:Chordata
+Class:Aves
+Order:Galliformes
+Family:Phasianidae
+Subfamily:Pavoninae
+Tribe:Pavonini</p>
+                </a>
+                 <a href="#" class="gallery-link" title="Order">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRomjJHn8GcUh_EISQKLg1Ae2Cqppx4XbrzQw&usqp=CAU" class="food-img">
+                    <h3 class="food-name">GOLDFINCh</h3>
+                    <p class="food-description">Kingdom:Animalia
+Phylum:Chordata
+Class:Aves
+Order:Galliformes
+Family:Phasianidae
+Subfamily:Pavoninae
+Tribe:Pavonini</p>
+                </a>
+                 <a href="#" class="gallery-link" title="Order">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq7kS1PKL7zNmtY1JB0WufAMMmaRor81Py2A&usqp=CAU" class="food-img">
+                    <h3 class="food-name">NIGHTINGALE</h3>
+                    <p class="food-description">Kingdom:Animalia
+Phylum:Chordata
+Class:Aves
+Order:Galliformes
+Family:Phasianidae
+Subfamily:Pavoninae
+Tribe:Pavonini</p>
+                </a>
+            </div>
+        </section>
+		
+<script>
+const hamburgers = document.querySelector('.headers .nav-bar .nav-lists .hamburgers');
+const mobile_menu = document.querySelector('.headers .nav-bar .nav-lists ul');
+const menu_item = document.querySelectorAll('.headers .nav-bar .nav-lists ul li a');
+const headers = document.querySelector('.headers.container');
+
+hamburgers.addEventListener('click', () => {
+	hamburgers.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		headers.style.backgroundColor = '#29323c';
+	} else {
+		headers.style.backgroundColor = 'transparent';
+	}
+});
+        
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburgers.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
+
+</script>		
+		
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>dogs</title>
+	<style  type="text/css">
+ 
+ html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff3377;
+  border-radius: 5rem;
+}	
+	
+#headers {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#headers .headers {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease;
+    background-color: transparent;
+}
+#headers .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#headers .nav-lists ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#headers .nav-lists ul.active {
+	left: 0%;
+}
+#headers .nav-lists ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#headers .nav-lists ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#headers .nav-lists ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#headers .nav-lists ul li:hover a {
+	color: crimson;
+}
+#headers .hamburgers {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid aqua;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: -200px;
+	float:right;
+}
+#headers .hamburgers:after 
+{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid aqua;
+	animation: hamburgers_puls 1s ease infinite;
+}
+#headers .hamburgers .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: black;
+	z-index: -1;
+}
+#headers.hamburgers .bar::after,
+#headers .hamburgers .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: black;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#headers .hamburgers .bar::after {
+	top: 8px;
+}
+#headers .hamburgers .bar::before {
+	bottom: 8px;
+}
+#headers .hamburgers.active .bar::before {
+	bottom: 0;
+}
+#headers .hamburgers.active .bar::after {
+	top: 0;
+}
+
+
+
+
+
+
+ 
+	table
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	.tab2
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	.tab3
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	.tab4
+	{
+	vertical-align:middle;
+	padding-top:50px;
+	padding-bottom:50px;
+	}
+	</style>
+</head>
+<body bgcolor="#ffe6f0" >
+
+<section id="headers">
+    <div class="headers container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+          </a>
+        </div>
+        <div class="nav-lists">
+          <div class="hamburgers">
+            <div class="bar"></div>
+          </div>
+          <ul >
+            <li><a href="C:\Users\HEMA\Notepad++\html\index.html" data-after="HOME">HOME</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\shop.html" data-after="SHOP">SHOP</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\gall.html" data-after="GALLERY">GALLERY</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\contactus.html" data-after="CONTACT US">CONTACT US</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\aboutuspage.html" data-after="ABOUT US">ABOUT US</a></li>
+			<li><a href="C:\Users\HEMA\Notepad++\html\doc.html" data-after="APPOINTMENT">APPOINTMENT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+<table bgcolor = "pink">
+<figure>
+<tr>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/labrador-retriever-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">LABRADOR</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Canada <br> LIFESPAN : 10-12years <br> HEIGHT:MALE: 22-24 inches (56-61cm)<br>
+FEMALE: 21-23 inches (53-58 cm)<br>	WEIGHT:Male: 60-75 pounds (27-34kg)<br>Female: 55-70 pounds (25-32 kg)</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/golden-retriever-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">GOLDEN RETRIVER</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United kingdom<br> LIFESPAN : 10-12years <br>HEIGHT:MALE: 22-24 inches (56-61cm)<br>
+FEMALE: 20-21 inches (51-56 cm)<br>	WEIGHT:Male: 60-80 pounds (27-36kg)<br>Female: 55-70 pounds (25-32 kg)</font> </p>
+</details></center>
+</td>
+<td><img src ="https://www.dogbreedslist.info/uploads/dog-pictures/german-shepherd-dog-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">GERMAN SHEPHERD</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Germany <br> LIFESPAN : 10-13years <br>HEIGHT:Male: 24-26 inches (60-65 cm)<br>
+Female: 22-24 inches (55-60 cm)<br>WEIGHT:	Male: 66-88 pounds (30-40 kg)<br>Female: 49-71 pounds (22-32 kg) </font></p>
+</details></center>
+</td>
+<td><img src="https://www.dogbreedslist.info/uploads/dog-pictures/beagle-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">BEAGLE</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United Kingdom<br> LIFESPAN : 10-12years<br>HEIGHT:Male: 14-16 inches (36-41 cm)<br>Female: 13-15 inches (33-38 cm)<br>WEIGHT:Male: 22-25 pounds (10-11 kg)<BR>
+Female: 20-23 pounds (9-10 kg) </font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+<table bgcolor = "pink" ; class="tab2">
+<figure>
+<tr>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/french-bulldog-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">FRENCH BULLDOG</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : France,United Kingdom<br> LIFESPAN : 10-12years <br> HEIGHT:12 inches (30 cm)<br>WEIGHT: French Bulldog: 19 - 22 pounds (9 - 10 kg) <br> 22 - 28 pounds (10 - 13 kg)</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/bulldog-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">BULLDOG</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United Kingdom <br> LIFESPAN : 8-10years<br>HEIGHT:12-16 inches (31-40 cm)<br>WEIGHT: Male: 53-55 pounds (24-25 kg)<br>Female: 49-51 pounds (22-23 kg)</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.dogbreedslist.info/uploads/dog-pictures/poodle-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">POODLE</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : France,Germany<br> LIFESPAN : 12-15years <br>HEIGHT:15 inches (38 cm) or more<br>WEIGHT:Male: 45-70 pounds (20-32 kg)<br>Female: 45-60 pounds (20-27 kg)</font></p>
+</details></center>
+</td>
+<td><img src="https://www.dogbreedslist.info/uploads/dog-pictures/shih-tzu-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SHIT-TZU</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : China <br> LIFESPAN : 10-16years<br>HEIGHT:8-11 inches (20-28 cm)<BR>WEIGHT:9-16 pounds (4-7 kg)</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+
+<table bgcolor = "pink" ; class="tab3">
+<figure>
+<tr>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/rottweiler-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">ROTTWEILER</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Germany <br> LIFESPAN : 8-11years <br> HEIGHT:Male: 24-27 inches (61-69 cm)<BR>Female: 22-25 inches (56-63 cm)<BR>WEIGHT:Male: 95-130 pounds (43-59 kg)<BR>
+Female: 85-115 pounds (38-52 kg)</font></p>
+</details></center>
+</td>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/pembroke-welsh-corgi-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">CORGI</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : United Kingdom <br> LIFESPAN : 12-14years<br>HEIGHT:Male: 10-12 inches (25-30 cm)<BR>Female: 10-12 inches (25-30 cm)<BR>WEIGHT:Male: 24-31 pounds (10-14 kg)<BR> Female: 24-28 pounds (11-13 kg)</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.dogbreedslist.info/uploads/dog-pictures/great-dane-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">GREAT DANE</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Germany<br> LIFESPAN : 7-10years<br>HEIGHT:Male: 30-34 inches (76-86 cm)<BR>Female: 28-32 inches (71-81 cm)<BR>WEIGHT:Male: 120-200 pounds (54-90 kg)<BR>Female: 100-130 pounds (45-59 kg)</font> </p>
+</details></center>
+</td>
+<td><img src="https://www.dogbreedslist.info/uploads/dog-pictures/siberian-husky-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SIBERIAN HUSKY</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Russia<br> LIFESPAN : 10-14years <br>HEIGHT:Male: 21–24 inches (53–61 cm)<BR>Female: 20–22 inches (51–56 cm)<BR>WEIGHT:Male: 45–60 pounds (20–27 kg)<BR>Female: 35–50 pounds (16–23 kg)</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+
+<table bgcolor = "pink" ; class="tab4">
+<figure>
+<tr>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/pug-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">PUG</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : China <br> LIFESPAN : 12-15years<br>HEIGHT:Male: 12-14 inches (30-36 cm)<BR>Female: 10-12 inches (25-30 cm)<BR>WEIGHT:Male: 13-20 pounds (6-9 kg)<BR>Female: 13-18 pounds (6-8 kg) </font></p>
+</details></center>
+</td>
+<td><img src = "https://www.dogbreedslist.info/uploads/dog-pictures/chihuahua-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">CHIHUAHUA</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Mexico<br> LIFESPAN : 14-18years <br>HEIGHT:6-9 inches (15-23 cm)<BR>WEIGHT:2-6 pounds (1-3 kg)</font></p>
+</details></center>
+</td>
+<td><img src ="https://www.dogbreedslist.info/uploads/dog-pictures/pomeranian-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">POMERANIAN</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN : Poland,Germany<br> LIFESPAN : 12-16years<br> HEIGHT:7-12 inches (18-30 cm)<BR>WEIGHT:3-7 pounds (1-3 kg)</font></p>
+</details></center>
+</td>
+<td><img src="https://www.dogbreedslist.info/uploads/dog-pictures/shiba-inu-1.jpg"><center><figcaption><font face="algerian" size=6 COLOR = "green">SHIBA-INU</font></figcaption></center>
+<center><details>
+<summary><font face="verdana">VIEW MORE</summary>
+<p>ORIGIN :Japan <br> LIFESPAN : 12-15years <br>HEIGHT:Male: 14-16 inches (36-41 cm)<BR>Female: 13-15 inches (33-38 cm)<BR>WEIGHT:Male: 18-25 pounds (8-11 kg)<BR>
+Female: 15-20 pounds (6.8-9 kg)</font></p>
+</details></center>
+</td>
+</tr>
+</figure>
+</table>
+
+<script>
+const hamburgers = document.querySelector('.headers .nav-bar .nav-lists .hamburgers');
+const mobile_menu = document.querySelector('.headers .nav-bar .nav-lists ul');
+const menu_item = document.querySelectorAll('.headers .nav-bar .nav-lists ul li a');
+const headers = document.querySelector('.headers.container');
+
+hamburgers.addEventListener('click', () => {
+	hamburgers.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		headers.style.backgroundColor = '#29323c';
+	} else {
+		headers.style.backgroundColor = 'transparent';
+	}
+});
+        
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburgers.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
+
+</script>
+
+</body>
+</html>

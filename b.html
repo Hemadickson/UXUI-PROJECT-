@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BLOG PAGE</title>
+<meta charset="UTF-8">
+
+ <style type="text/css">
+ * {
+		margin: 0;
+		padding: 0;
+	}
+
+ #headers {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+.center span
+{
+    color: brown;
+}
+#headers .headers {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease;
+    background-color: transparent;
+}
+#headers .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#headers .nav-lists ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#headers .nav-lists ul.active {
+	left: 0%;
+}
+#headers .nav-lists ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#headers .nav-lists ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#headers .nav-lists ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#headers .nav-lists ul li:hover a {
+	color: crimson;
+}
+#headers .hamburgers {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid aqua;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: -200px;
+	float:right;
+}
+#headers .hamburgers:after 
+{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid aqua;
+	animation: hamburgers _puls 1s ease infinite;
+}
+#headers .hamburgers .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: black;
+	z-index: -1;
+}
+#headers.hamburgers .bar::after,
+#headers .hamburgers .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: black;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#headers .hamburgers .bar::after {
+	top: 8px;
+}
+#headers .hamburgers .bar::before {
+	bottom: 8px;
+}
+#headers .hamburgers.active .bar::before {
+	bottom: 0;
+}
+#headers .hamburgers.active .bar::after {
+	top: 0;
+}
+
+table
+	{
+	vertical-align:middle;
+	}
+
+.img a{
+		
+		text-decoration: none;
+	}
+ 
+.img
+{
+border-radius:50%;
+|
+
+ </style>
+
+</head>
+<body bgcolor="#ffe6f0">
+     <section id="headers">
+    <div class="headers container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+          </a>
+        </div>
+        <div class="nav-lists">
+          <div class="hamburgers">
+            <div class="bar"></div>
+          </div>
+            <ul>
+            <li><a href="C:\Users\HEMA\Notepad++\html\index.html" data-after="HOME">HOME</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\shop.html" data-after="SHOP">SHOP</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\gall.html" data-after="GALLERY">GALLERY</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\contactus.html" data-after="CONTACT US">CONTACT US</a></li>
+            <li><a href="C:\Users\HEMA\Notepad++\html\aboutpage.html" data-after="ABOUT US">ABOUT US</a></li>
+			<li><a href="C:\Users\HEMA\Notepad++\html\doc.html" data-after="APPOINTMENT">APPOINTMENT</a></li>
+                </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="service">
+
+		<!-- Heading-->
+		<h1 class="center" style=" color: blue; font-family: inherit; font-size: 30px; text-align:left;">
+			<span>B</span>LOG<span></span>
+		</h1>
+<center>
+<table>
+<tr>
+<td>
+<a href = " C:\Users\HEMA\Notepad++\html\dogs.html"><img src= "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5cfe5aed-c11e-453f-bc7b-a415e716b90b/dea4z1f-9506f230-456b-45f4-9622-a9c7e21a0900.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVjZmU1YWVkLWMxMWUtNDUzZi1iYzdiLWE0MTVlNzE2YjkwYlwvZGVhNHoxZi05NTA2ZjIzMC00NTZiLTQ1ZjQtOTYyMi1hOWM3ZTIxYTA5MDAuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.j5Rn_YZYv0HznQ9EDd-Z7LfNJgcofragJaigu-mqITA" width="300px" height="200px"></a><br>
+
+<center><p class="img">
+<a href = " C:\Users\HEMA\Notepad++\html\dogs.html"><b><font size = "5">DOG BREEDS</b></font></a>
+</p></center>
+</td>
+<td>
+<a href = " C:\Users\HEMA\Notepad++\html\cats.html"><img src="https://cdn.dribbble.com/users/6620596/screenshots/14792345/media/af61fa935b055891cb800a9e41ebb747.gif" width="300px" height="200px"></a><br>
+<center><p class="img">
+<a href = " C:\Users\HEMA\Notepad++\html\cats.html"><b><font size = "5">CAT BREEDS</b></font></a>
+</p></center>
+</td>
+<td>
+<a href = " C:\Users\HEMA\Notepad++\html\cats.html"> <img src="https://cdn.dribbble.com/users/2234174/screenshots/5499433/tropical-birds-dribbble.gif" width="300px" height="200px"></a><br>
+<center><p class="img">
+<a href = " C:\Users\HEMA\Notepad++\html\birds.html"><b><font size = "5">BIRD BREEDS</b></font></a>
+</p></center>
+</td>
+</tr>
+</table>
+</center>
+
+		
+	
+<center><figure>
+<img src ="https://wallpapercave.com/wp/fsGU2gX.jpg"  height = "400px" width = "800px"><figcaption><font face="algerian" size=6 COLOR = "black">"THE BEST THERAPIST HAS FUR AND FOUR LEGS"</font></figcaption><br>
+<p>It's known far and wide that dogs are man's best friend. Their adorable faces and happy go lucky attitudes fill our lives with such joy, but did you know that there's actually numerous benefits of having a dog? From helping you to get fit to meeting new people, your puppy can actually help to improve your health and social life.There's an old saying, which is certainly true, that dogs repay the love you give them ten-fold. Before you rush out and adopt a dog, it's important to think it through very thoroughly. Caring for a dog can be hard work and it's a lifetime commitment, as your dog will be relying on you for many years to comeOne of the key benefits of having a dog is that they significantly increase the amount of exercise you do on a regular basis - and you might not even notice it! While it can be difficult to motivate ourselves to go for a walk alone, when we know our puppy needs exercise, we often don't think twice. All those strolls through the park and adventures in the wood add up.One of the unexpected benefits of dogs is the way they add to your social life. 
+Going to obedience classes, saying 'hello' to other dog walkers when you go to the park with your canine companion - there are dozens of ways in which your dog makes you more sociable.One of the most fascinating benefits of dogs is their amazing ability to make us feel calm - and that has a brilliant effect on our health. According to Harvard University, studies have shown that dog owners have lower blood pressure which is both due to the increase in exercise and that blood pressure goes down when you merely pet your pooch. It may surprise you to learn that our blood pressure actually has a big effect on our wellbeing too, so next time you feel stressed, or just need some time to relax, give your dog some TLC - you'll both feel the benefit!</p>
+</figure></center>
+
+<center><figure>
+<img src ="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg?h=c8d00152&itok=1fdekAh2"  height = "400" width = "800px"><figcaption><font face="algerian" size=6 COLOR = "black">"TIME SPENT WITH CATS IS NEVER WASTED"</font></figcaption><br>
+<p>Owning a cat can bring unconditional love and companionship to your life. Having a feline friend can also help to relieve stress and improve your heart health.Owning a cat can be an extremely rewarding relationship. A cat has the ability to both calm your nervous system and provide an immediate outlet for fun and play. Although cats are independent animals who like to scavenge and explore on their own terms, they are also very affectionate with their owners and people they trust.
+Most cats love to curl up in your lap at the end of a long day while you watch television or read a book. The simplicity of this act can cause an automatic release of all the right kinds of chemicals to your brain, allowing you to ease into the evening without the weight of the world on your shoulders. Any cat owner will tell you just how much their furry friend helps them to relax and unwind.Cat owners know how one session of petting or playing with their cat can turn a bad day into a good one. Scientific evidence also shows that a cat’s purr can calm your nervous system and lower your blood pressureOne of the great benefits of owning a cat is that you don’t need much space to play and have fun together. Unlike large animals who need plenty of space to play fetch or run around, all you need with a cat is your living room and a little imagination. Beyond a ball of yarn, there are plenty of other ways to entertain and bond with a cat.An old childhood sleepover favorite can now become you and your fluff ball’s favorite pastime. 
+Just hide a toy or an object that interests them under a blanket, and watch your cat scavenge.</p>
+</figure></center>
+
+
+<center><figure>
+<img src ="https://www.nativebreed.org/wp-content/uploads/2020/05/Parakeets-1024x683.jpg"  height = "400" width = "800px"><figcaption><font face="algerian" size=6 COLOR = "black">"ITS A COINCIDENCE THAT BOTH BIRDS AND ANGELS HAVE WINGS"</font></figcaption><br>
+<p>Fantastic birds like parrots flaunt fascinating feather designs coated with bright and striking colors and patterns, making them visually appealing.Even simpler breeds like Conures look pleasing and are literal eye candies that can melt hearts.Birds are intelligent, especially the African Grey Parrot, and trainable to talk if their owner has the time and patience.They also love chatting and playing with their humans, and they can learn some tricks and play games enthusiastically.So, these creatures are interactive and sometimes better than some dogs.Would you be shocked if we tell you that some birds can outlive you? Some breeds live up to 50 years while others can reach 80 years if healthy and fed properly.Others can even live beyond 100 years. Given their size and lifestyle, it’s incredible how a bird can be with you in your whole life as a source of motivation and companionship
+As birds get older, they’ll need more regular veterinarian checkups and blood tests.
+However, they don’t need vaccinations or other costly veterinary care services as long as they’re healthy.So, they’re a less expensive pet option in general.Birds are also ideal first pets since they can quickly adapt to their new environment.
+
+They are easy to integrate into families with children and teach kids the responsibility of pet ownership. </p><br>
+
+
+<div>
+<img src="https://www.sciencealert.com/images/2021-07/processed/CatWearingMedicalFaceMaskWhileSittingOnCouch_1024.jpg" width="350" height="250" alt=""></a></li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZi6cAJskFAUkXcES5egIbv87UjD8MhJ8KQTEaxU4PfX5XNq5Ra3hhqKEkX3mJcW3C_6Y&usqp=CAU" width="350" height="250" alt=""></a></li>
+<img src="https://im.indiatimes.in/photogallery/2020/Aug/WhatsApp-Image-2020-08-19-at-55912-PM_5f3e37c8ce45a.jpeg?w=2184&h=1116&cc=1" width="350" height="250" alt=""></a></li>
+</div>
+   
+   <script>
+       const hamburgers = document.querySelector('.headers .nav-bar .nav-lists .hamburgers');
+const mobile_menu = document.querySelector('.headers .nav-bar .nav-lists ul');
+const menu_item = document.querySelectorAll('.headers .nav-bar .nav-lists ul li a');
+const headers = document.querySelector('.headers.container');
+
+hamburgers.addEventListener('click', () => {
+	hamburgers.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		headers.style.backgroundColor = '#29323c';
+	} else {
+		headers.style.backgroundColor = 'transparent';
+	}
+});
+        
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburgers.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+}); 
+    </script> 
+</body>
+</html>

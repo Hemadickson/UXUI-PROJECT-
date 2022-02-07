@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET WEBSITE</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <style type = "text/css">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff3377;
+  border-radius: 5rem;
+}
+section
+    {
+        position:relative;
+        width:100%;
+        min-height: 100vh;
+        padding: 100px;
+        display: :flex;
+        justify-content: space-between;
+    }
+    
+header
+    {
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .content {
+        position:relative;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content .textbox
+    {
+        position: relative;
+        max-width: 600px;
+        
+    }
+     .content .textbox h2
+    {
+        color: aqua;
+        font-size: 4em;
+        line-height: 1.4em;
+        font-weight: 500;
+    }
+     .content .textbox h2 span
+    {
+        color: black;
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+    .content .imgbox;
+    {
+        width: 600px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+        margin-top: 50px;
+        
+    }
+    .content .imgbox img
+    {
+        max-width: 340px;
+        
+    }
+    .starbucks
+    {
+        width: 500px;
+        top :10px;
+        
+    }
+    .thumb
+    {
+        position:absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translate(-50%);
+        display: flex;
+    }
+    .thumb li
+    {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .thumb li:hover
+    {
+        transform: translateY(-15px);
+    }
+    .thumb li img
+    {
+        max-width: 60px; 
+    }
+    .circle
+    {
+        position :absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        clip-path: circle(600px at right 800px)
+    }
+    
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #130f40;
+}
+
+.heading span {
+  color: #e67e22;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #130f40;
+  cursor: pointer;
+  background: none;
+  color: #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #130f40;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+.header {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 9%;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-transform: translateY(-10rem);
+          transform: translateY(-10rem);
+}
+
+.plan .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.plan .box-container .box {
+  position: relative;
+  padding: 2rem;
+  border-radius: .5rem;
+  position: relative;
+  margin-bottom: 2rem;
+  background: #ffe6f0;
+}
+.plan .heading span
+{
+    color: #ff3377;
+}
+.plan .box-container .box .btn {
+  position: absolute;
+  bottom: -2rem;
+  right: 2rem;
+  background: #ff66a3;
+    border-color: #ff80b3;
+}
+
+.plan .box-container .box .title {
+  text-align: center;
+  color: #ff3377;
+  font-size: 2rem;
+}
+
+.plan .box-container .box .day {
+  text-align: center;
+  color: #000000;
+  font-size: 3.5rem;
+}
+
+.plan .box-container .box .icon {
+  font-size: 5rem;
+  padding: 2rem 0;
+}
+
+.plan .box-container .box .list {
+  margin: 1rem 0;
+}
+
+.plan .box-container .box .list p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.6rem;
+  color: #ff3377;
+  padding: 1rem 0;
+}
+
+.plan .box-container .box .list p span {
+  color: #000000;
+}
+
+.plan .box-container .box .amount {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: #130f40;
+}
+
+.plan .box-container .box .amount span {
+  font-size: 3rem;
+}
+
+</style>
+</head>
+<body>
+
+<section class="plan" id="plan">
+
+    <h1 class="heading"> choose a plan<span> FOR YOUR CAT</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> BASIC </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+                <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-times" style="color: red;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style="color: red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style="color: red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>50</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> BASIC </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style="color: red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style="color: red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>100</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> BASIC </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+              <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style="color: red;"></span> </p>
+                   <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style="color: red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>110</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+      
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> STANDARD </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style="color: red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style="color: red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>200</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> STANDARD </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check"  style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+               <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style="color: red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style="color: red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>250</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> STANDARD </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-times" style="color: red;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-times" style="color: red;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>300</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> PREMIUM </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-check" style="color: green;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>400</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+        
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> PREMIUM </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-check" style="color: green;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>400</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+        
+        <div class="box">
+            <h3 class="title">CAT CARE</h3>
+            <h3 class="day"> PREMIUM </h3>
+            <i class="fas fa-cat icon" style="color: #ff3377;" ></i>
+            <div class="list">
+               <p><span class="fas fa-hotel" style="color: black;"></span>PET ROOM<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-spa" style="color: black;"></span>PET GROOMING<span class="fas fa-check" style="color: green;"></span></p>
+                <p> <span class="fas fa-hotel" style="color: black;"></span>PET EXERCISE<span class="fas fa-check" style="color: green;"></span> </p>
+                <p> <span class="fas fa-drumstick-bite" style="color: black;"></span>PET MEALS<span class="fas fa-check" style="color: green;"></span> </p>
+            </div>
+            <div class="amount"><span>Rs</span>400</div>
+            <a href="paynow.html" class="btn"> PAY NOW </a>
+        </div>
+    </div>
+    
+    </section>
+    </body>
+</html>
